@@ -1,0 +1,81 @@
+\hypertarget{classlogger_1_1real_1_1logger}{}\doxysection{logger\+::real\+::logger Class Reference}
+\label{classlogger_1_1real_1_1logger}\index{logger::real::logger@{logger::real::logger}}
+
+
+The logger class describe real implementation of \mbox{\hyperlink{classlogger_1_1interf_1_1logger}{interf\+::logger}}.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+hpp$>$}
+
+Inheritance diagram for logger\+::real\+::logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlogger_1_1real_1_1logger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogger_1_1real_1_1logger_ad8df18465224ac17b406dcd444d01fb3}{logger}} (cvs\+\_\+util\+::file\+::interf\+::file \&log\+\_\+file, cvs\+\_\+util\+::timer\+::interf\+::timer \&log\+\_\+time)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classlogger_1_1real_1_1logger_ad8df18465224ac17b406dcd444d01fb3}{logger\+::logger}} -\/ Constructor for logger class \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlogger_1_1real_1_1logger_afb1bdd97c53cec76609990c36fc51110}{log}} (const std\+::string \&message) override
+\begin{DoxyCompactList}\small\item\em log This function will write all important events into specified file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlogger_1_1real_1_1logger_aa70fe8671de61274a8a6c9dbd45c4ca3}\label{classlogger_1_1real_1_1logger_aa70fe8671de61274a8a6c9dbd45c4ca3}} 
+\mbox{\hyperlink{classlogger_1_1real_1_1logger_aa70fe8671de61274a8a6c9dbd45c4ca3}{$\sim$logger}} () override
+\begin{DoxyCompactList}\small\item\em Overriden destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The logger class describe real implementation of \mbox{\hyperlink{classlogger_1_1interf_1_1logger}{interf\+::logger}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlogger_1_1real_1_1logger_ad8df18465224ac17b406dcd444d01fb3}\label{classlogger_1_1real_1_1logger_ad8df18465224ac17b406dcd444d01fb3}} 
+\index{logger::real::logger@{logger::real::logger}!logger@{logger}}
+\index{logger@{logger}!logger::real::logger@{logger::real::logger}}
+\doxysubsubsection{\texorpdfstring{logger()}{logger()}}
+{\footnotesize\ttfamily logger\+::real\+::logger\+::logger (\begin{DoxyParamCaption}\item[{cvs\+\_\+util\+::file\+::interf\+::file \&}]{log\+\_\+file,  }\item[{cvs\+\_\+util\+::timer\+::interf\+::timer \&}]{log\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classlogger_1_1real_1_1logger_ad8df18465224ac17b406dcd444d01fb3}{logger\+::logger}} -\/ Constructor for logger class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+file} & -\/ Reference to a file object used by dependency injection for taking a file into wich we will log all events \\
+\hline
+{\em log\+\_\+time} & -\/ Reference to a timer object used by dependency injection for taking time when wich message was logged \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlogger_1_1real_1_1logger_afb1bdd97c53cec76609990c36fc51110}\label{classlogger_1_1real_1_1logger_afb1bdd97c53cec76609990c36fc51110}} 
+\index{logger::real::logger@{logger::real::logger}!log@{log}}
+\index{log@{log}!logger::real::logger@{logger::real::logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily bool logger\+::real\+::logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+log This function will write all important events into specified file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ Used to pass event to log function to be writed into file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True in case log function wrote successful into file and False if not 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogger_1_1interf_1_1logger_ac373b95fde0619419d6155f49b4c95ff}{logger\+::interf\+::logger}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/log\+\_\+manager/real/logger.\+hpp\item 
+src/log\+\_\+manager/real/logger.\+cpp\end{DoxyCompactItemize}
