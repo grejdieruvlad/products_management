@@ -2,6 +2,7 @@
 #define LOGGER_TEST_HPP
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
+
 #include <cvs_util/file/mock/file.hpp>
 #include <cvs_util/timer/mock/timer.hpp>
 #include "log_manager/real/logger.hpp"
