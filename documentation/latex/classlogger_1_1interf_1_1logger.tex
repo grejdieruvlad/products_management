@@ -1,0 +1,58 @@
+\hypertarget{classlogger_1_1interf_1_1logger}{}\doxysection{logger\+::interf\+::logger Class Reference}
+\label{classlogger_1_1interf_1_1logger}\index{logger::interf::logger@{logger::interf::logger}}
+
+
+The logger interface class used to log all important events into a file.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+hpp$>$}
+
+Inheritance diagram for logger\+::interf\+::logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlogger_1_1interf_1_1logger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogger_1_1interf_1_1logger_a98e79508c1b62db2ee1ea87e6040e1ac}\label{classlogger_1_1interf_1_1logger_a98e79508c1b62db2ee1ea87e6040e1ac}} 
+virtual \mbox{\hyperlink{classlogger_1_1interf_1_1logger_a98e79508c1b62db2ee1ea87e6040e1ac}{$\sim$logger}} ()=default
+\begin{DoxyCompactList}\small\item\em $\sim$logger virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classlogger_1_1interf_1_1logger_ac373b95fde0619419d6155f49b4c95ff}{log}} (const std\+::string \&message)=0
+\begin{DoxyCompactList}\small\item\em log This function will write all important events into specified file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The logger interface class used to log all important events into a file. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlogger_1_1interf_1_1logger_ac373b95fde0619419d6155f49b4c95ff}\label{classlogger_1_1interf_1_1logger_ac373b95fde0619419d6155f49b4c95ff}} 
+\index{logger::interf::logger@{logger::interf::logger}!log@{log}}
+\index{log@{log}!logger::interf::logger@{logger::interf::logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily virtual bool logger\+::interf\+::logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+log This function will write all important events into specified file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ Used to pass event to log function to be writed into file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True in case log function wrote successful into file and False if not 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlogger_1_1real_1_1logger_afb1bdd97c53cec76609990c36fc51110}{logger\+::real\+::logger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/log\+\_\+manager/interf/logger.\+hpp\end{DoxyCompactItemize}

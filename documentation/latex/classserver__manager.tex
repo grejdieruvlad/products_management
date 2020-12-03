@@ -1,0 +1,131 @@
+\hypertarget{classserver__manager}{}\doxysection{server\+\_\+manager Class Reference}
+\label{classserver__manager}\index{server\_manager@{server\_manager}}
+
+
+The \mbox{\hyperlink{classserver__manager}{server\+\_\+manager}} class The server layer implementation.  
+
+
+
+
+{\ttfamily \#include $<$server\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__manager_af015edc7bce8b58ef51c81f8a60e5951}{server\+\_\+manager}} (cvs\+\_\+util\+::network\+::tcp\+::interf\+::acceptor \&\+\_\+acceptor, \mbox{\hyperlink{classdb__manager_1_1interf_1_1db__manager}{db\+\_\+manager\+::interf\+::db\+\_\+manager}} \&\+\_\+db\+\_\+manager, \mbox{\hyperlink{classlogger_1_1interf_1_1logger}{logger\+::interf\+::logger}} \&\+\_\+logger, cvs\+\_\+util\+::timer\+::interf\+::timer \&\+\_\+duration)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classserver__manager}{server\+\_\+manager}} -\/ Constructor with all dependency injections \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__manager_a1fee0e2baa1f592217e033f52e0f4610}\label{classserver__manager_a1fee0e2baa1f592217e033f52e0f4610}} 
+void \mbox{\hyperlink{classserver__manager_a1fee0e2baa1f592217e033f52e0f4610}{server\+\_\+writes}} ()
+\begin{DoxyCompactList}\small\item\em server\+\_\+writes This function will run on a separate thread and will wait for a message from server. e.\+g. \char`\"{}\+Exit\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__manager_a3c0bdb9ca034c27c92a867c060564b73}\label{classserver__manager_a3c0bdb9ca034c27c92a867c060564b73}} 
+void \mbox{\hyperlink{classserver__manager_a3c0bdb9ca034c27c92a867c060564b73}{accept\+\_\+connections}} (cvs\+\_\+util\+::network\+::tcp\+::interf\+::acceptor \&)
+\begin{DoxyCompactList}\small\item\em accept\+\_\+connections This function will initiate server socket, wil bind and set all neceseries socket\textquotesingle{}s options and will put server in listening state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver__manager_a7d9599eff42e7c00b13336864ebd9db3}\label{classserver__manager_a7d9599eff42e7c00b13336864ebd9db3}} 
+void \mbox{\hyperlink{classserver__manager_a7d9599eff42e7c00b13336864ebd9db3}{start\+\_\+server}} ()
+\begin{DoxyCompactList}\small\item\em start\+\_\+server This function will initiate server on a new thread \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__manager_afcb82ff43222f603757cbde607717a89}{log}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em log -\/ This function will log into a file all important things that will happen on the server \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__manager_a13ceb521112df3a67bfc536a215d90d3}{client\+\_\+handler}} (cvs\+\_\+util\+::network\+::socket\+\_\+tcp\+\_\+ptr client)
+\begin{DoxyCompactList}\small\item\em client\+\_\+handler -\/ This function will maintain communication between server and each client on separated thread \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classserver__manager_a3ef7febc630502ebc2271b7151913679}{format\+\_\+categories\+\_\+result}} (const std\+::vector$<$ std\+::string $>$ \&rows)
+\begin{DoxyCompactList}\small\item\em format\+\_\+categories\+\_\+result This function will format the result for get\+\_\+categories\+\_\+of\+\_\+category in a table format \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classserver__manager_a725ba5ae8098328b350d6bfe52955ca6}{format\+\_\+products\+\_\+result}} (const std\+::vector$<$ std\+::string $>$ \&rows)
+\begin{DoxyCompactList}\small\item\em format\+\_\+products\+\_\+result This function will format the result for get\+\_\+products\+\_\+of\+\_\+category in a table format \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classserver__manager}{server\+\_\+manager}} class The server layer implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__manager_af015edc7bce8b58ef51c81f8a60e5951}\label{classserver__manager_af015edc7bce8b58ef51c81f8a60e5951}} 
+\index{server\_manager@{server\_manager}!server\_manager@{server\_manager}}
+\index{server\_manager@{server\_manager}!server\_manager@{server\_manager}}
+\doxysubsubsection{\texorpdfstring{server\_manager()}{server\_manager()}}
+{\footnotesize\ttfamily server\+\_\+manager\+::server\+\_\+manager (\begin{DoxyParamCaption}\item[{cvs\+\_\+util\+::network\+::tcp\+::interf\+::acceptor \&}]{\+\_\+acceptor,  }\item[{\mbox{\hyperlink{classdb__manager_1_1interf_1_1db__manager}{db\+\_\+manager\+::interf\+::db\+\_\+manager}} \&}]{\+\_\+db\+\_\+manager,  }\item[{\mbox{\hyperlink{classlogger_1_1interf_1_1logger}{logger\+::interf\+::logger}} \&}]{\+\_\+logger,  }\item[{cvs\+\_\+util\+::timer\+::interf\+::timer \&}]{\+\_\+duration }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classserver__manager}{server\+\_\+manager}} -\/ Constructor with all dependency injections 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+acceptor} & -\/ Is used to inject an acceptor object \\
+\hline
+{\em \+\_\+db\+\_\+manager} & -\/ Is used to inject an \mbox{\hyperlink{namespacedb__manager}{db\+\_\+manager}} object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__manager_a13ceb521112df3a67bfc536a215d90d3}\label{classserver__manager_a13ceb521112df3a67bfc536a215d90d3}} 
+\index{server\_manager@{server\_manager}!client\_handler@{client\_handler}}
+\index{client\_handler@{client\_handler}!server\_manager@{server\_manager}}
+\doxysubsubsection{\texorpdfstring{client\_handler()}{client\_handler()}}
+{\footnotesize\ttfamily void server\+\_\+manager\+::client\+\_\+handler (\begin{DoxyParamCaption}\item[{cvs\+\_\+util\+::network\+::socket\+\_\+tcp\+\_\+ptr}]{client }\end{DoxyParamCaption})}
+
+
+
+client\+\_\+handler -\/ This function will maintain communication between server and each client on separated thread 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & -\/ Pointer that holds address of client\textquotesingle{}s socket object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__manager_a3ef7febc630502ebc2271b7151913679}\label{classserver__manager_a3ef7febc630502ebc2271b7151913679}} 
+\index{server\_manager@{server\_manager}!format\_categories\_result@{format\_categories\_result}}
+\index{format\_categories\_result@{format\_categories\_result}!server\_manager@{server\_manager}}
+\doxysubsubsection{\texorpdfstring{format\_categories\_result()}{format\_categories\_result()}}
+{\footnotesize\ttfamily std\+::string server\+\_\+manager\+::format\+\_\+categories\+\_\+result (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+format\+\_\+categories\+\_\+result This function will format the result for get\+\_\+categories\+\_\+of\+\_\+category in a table format 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ Is used to reference a vector of strings that will be used to store all rows of database query result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ This function will return a formated string that contain database query result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__manager_a725ba5ae8098328b350d6bfe52955ca6}\label{classserver__manager_a725ba5ae8098328b350d6bfe52955ca6}} 
+\index{server\_manager@{server\_manager}!format\_products\_result@{format\_products\_result}}
+\index{format\_products\_result@{format\_products\_result}!server\_manager@{server\_manager}}
+\doxysubsubsection{\texorpdfstring{format\_products\_result()}{format\_products\_result()}}
+{\footnotesize\ttfamily std\+::string server\+\_\+manager\+::format\+\_\+products\+\_\+result (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+format\+\_\+products\+\_\+result This function will format the result for get\+\_\+products\+\_\+of\+\_\+category in a table format 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ Is used to reference a vector of strings that will be used to store all rows of database query result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function will return a formated string that contain database query result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver__manager_afcb82ff43222f603757cbde607717a89}\label{classserver__manager_afcb82ff43222f603757cbde607717a89}} 
+\index{server\_manager@{server\_manager}!log@{log}}
+\index{log@{log}!server\_manager@{server\_manager}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void server\+\_\+manager\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+log -\/ This function will log into a file all important things that will happen on the server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ This parameter will contain info to be logged into file e.\+g. client\textquotesingle{}s commands, server\textquotesingle{}s answers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/server\+\_\+manager/server\+\_\+manager.\+hpp\item 
+src/server\+\_\+manager/server\+\_\+manager.\+cpp\end{DoxyCompactItemize}
