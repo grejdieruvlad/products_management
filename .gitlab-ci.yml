@@ -21,8 +21,11 @@ build_centos:
     - web
     - /^.*_.*$/
   script:
-    - > 
-      bash -l ci/ci.sh --project 
+    - cd build
+    - conan install ..
+    - conan build..
+    #- > 
+      #bash -l ci/ci.sh --project 
   artifacts:
     paths:
      - build/project
@@ -39,7 +42,8 @@ run_tests:
     - devel
     - /^.*_.*$/
   script:
-    bash -l ci/ci.bat --run_unit_tests projet_test"
+
+    #bash -l ci/ci.bat --run_unit_tests projet_test"
   dependencies:
     - build_centos
   artifacts:
