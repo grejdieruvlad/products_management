@@ -44,7 +44,7 @@ run_tests_job:
     - master
     - /^.*_.*$/
   script:
-    echo "Should be test"
+    - echo "Should be test"
   dependencies:
     - build_job
     
