@@ -11,13 +11,14 @@ variables:
   linux_docker_image: "centos_gcc_legacy_generic_v3"
   production_generic_set: "production_gcc_generic_v2"
 
-build_centos:
+build_job:
   stage: build
   tags:
     - linux
     - docker
   only:
     - devel
+    - master
     - web
     - /^.*_.*$/
   script:
@@ -31,7 +32,7 @@ build_centos:
      - build/project
     expire_in : 7 day
 
-run_tests:
+run_tests_job:
   stage: tests
   image: $linux_docker_image
   tags: 
@@ -40,14 +41,14 @@ run_tests:
   only:
     - web
     - devel
+    - master
     - /^.*_.*$/
   script:
     echo "Should be test"
-    #bash -l ci/ci.bat --run_unit_tests projet_test"
   dependencies:
-    - build_centos
-  artifacts:
+    - build_job
+  """artifacts:
     paths:
       - build/project_test
-    expire_in : 7 day
+    expire_in : 7 day"""
   
