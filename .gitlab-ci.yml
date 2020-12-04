@@ -23,7 +23,7 @@ build_centos:
   script:
     - cd build
     - conan install ..
-    - conan build..
+    - conan build ..
     #- > 
       #bash -l ci/ci.sh --project 
   artifacts:
@@ -42,7 +42,7 @@ run_tests:
     - devel
     - /^.*_.*$/
   script:
-
+    echo "Should be test"
     #bash -l ci/ci.bat --run_unit_tests projet_test"
   dependencies:
     - build_centos
