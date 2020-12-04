@@ -23,10 +23,10 @@ build_job:
     - /^.*_.*$/
   script:
     - cd build
-    - conan install ..
-    - conan build ..
+    - bash conan install ../
+    - bash conan build ../
     #- > 
-      #bash -l ci/ci.sh --project 
+    #bash -l ci/ci.sh --project 
   artifacts:
     paths:
      - build/project
