@@ -21,11 +21,11 @@ build_centos:
     - web
     - /^.*_.*$/
   script:
-    - >
+    - > 
       bash -l ci/ci.sh --project 
-    artifacts:
-      paths:
-        - build/project
+  artifacts:
+    paths:
+     - build/project
     expire_in : 7 day
 
 run_tests:
@@ -40,9 +40,9 @@ run_tests:
     - /^.*_.*$/
   script:
     bash -l ci/ci.bat --run_unit_tests projet_test"
-      dependencies:
-        - build_centos
-    artifacts:
-      paths:
-        - build/project_test
+  dependencies:
+    - build_centos
+  artifacts:
+    paths:
+      - build/project_test
     expire_in : 7 day
