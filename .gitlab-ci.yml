@@ -28,7 +28,6 @@ build_job:
      - $dir_build/project_test
      - $dir_build/build.out
     expire_in : 7 day
-
 run_tests_job:
   stage: tests
   image: $linux_docker_image
