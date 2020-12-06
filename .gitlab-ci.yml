@@ -45,7 +45,7 @@ run_tests_job:
   dependencies:
     - build_job
 
-  run_check_warnings_job:
+run_check_warnings_job:
   stage: tests
   image: $linux_docker_image
   tags: 
