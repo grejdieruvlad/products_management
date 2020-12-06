@@ -1,3 +1,5 @@
+before_script:
+  - apt-get install -y python-pip
 #Stages
 stages:
   - build
