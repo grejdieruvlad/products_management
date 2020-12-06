@@ -28,6 +28,6 @@ TEST(logger, succesful_log)
   EXPECT_CALL(test_file, put(testing::_)).Times(1).
       WillOnce(testing::ReturnRef(test_file));
   EXPECT_CALL(test_file, close()).Times(1);
-  EXPECT_TRUE(logger.log(""));
+  EXPECT_TRUE(logger.log(" "));
 }
 #endif // LOGGER_TEST_HPP

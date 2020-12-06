@@ -691,3 +691,25 @@ Invalid command for getting all categories!
 [Thu Dec  3 17:32:26 2020]: Client[127.0.0.1] was disconnected
 
 [Thu Dec  3 20:19:48 2020]: New client connected from : [127.0.0.1]
+[Sun Dec  6 17:54:31 2020]: New client connected from : [127.0.0.1]
+[Sun Dec  6 17:54:59 2020]: [CLIENT]: get_all_categories Execution time: 28704245.157000 microseconds
+[SERVER]:
++-------------+---------------+-----------------------+------------------+
+| CATEGORY_ID | CATEGORY_NAME | CATEGORY_DESC         | HEAD_CATEGORY_ID |
++-------------+---------------+-----------------------+------------------+
+1        Auto        Category                
+2        Drinks        Category                
+3        BMW        Subcategory        1        
+4        Ford        Subcategory        1        
+5        X6        Model of BMW        3        
+6        Mondeo        Model of Ford        4        
+7        Focus        Model of Ford        4        
+8        Gasoline        Engine of Focus        7        
+9        Diesel        Engine of Focus        7        
+10        Wine        Subcategory of Drinks        2        
+11        Water        Subcategory of Drinks        2        
+12        Soda        Subcategory of Drinks        2        
+
+ Execution time:3742.278000 microseconds
+[Sun Dec  6 17:55:26 2020]: Client[127.0.0.1] was disconnected
+

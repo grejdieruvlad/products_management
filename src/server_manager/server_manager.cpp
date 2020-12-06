@@ -411,9 +411,9 @@ void app::server_manager::server_manager::client_handler(
     {
       std::lock_guard<std::mutex> lock(logger_mtx);
       logger.log("[CLIENT]: " + message_from_client + " Execution time: " +
-                 std::to_string(exection_request.count()) +"\n[SERVER]:\n"+
+                 std::to_string(exection_request.count())+ " microseconds" +"\n[SERVER]:\n"+
                  message_to_client + "\n Execution time:" +
-                 std::to_string(exection_response.count()));
+                 std::to_string(exection_response.count()) + " microseconds" );
     }
     client->write_some(message_to_client, errc);
     client_command_split.clear();

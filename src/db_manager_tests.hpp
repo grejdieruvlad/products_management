@@ -58,3 +58,4 @@ TEST(db_manager, remove_category_succesed)
   //        " with all subcateories;" );
 */
 #endif // DB_MANAGER_TESTS_HPP
+
