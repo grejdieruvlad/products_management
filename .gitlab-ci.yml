@@ -21,13 +21,8 @@ build_job:
     - web
     - /^.*_.*$/
   script:
-    - python -u ../cpp_ci_utils/cli.py build --flags production_gcc_generic_v2 -bm yes -scl yes
-  artifacts:
-    paths:
-     - build/project
-     - build/project_test
-     - build/build.out
-    expire_in : 7 day
+    - echo "check_warnings"
+    
 
 run_tests_job:
   stage: tests
@@ -41,7 +36,8 @@ run_tests_job:
     - master
     - /^.*_.*$/
   script:
-    - python -u ../cpp_ci_utils/cli.py run unittest build/project_test
+    - echo "unittest"
+  
   dependencies:
     - build_job
 
@@ -57,7 +53,8 @@ run_check_warnings_job:
     - master
     - /^.*_.*$/
   script:
-    - python -u ../cpp_ci_utils/cli.py check_warnings -clf build/build.out -mw 1
+    - echo "check_warnings"
+    
   dependencies:
     - build_job
     
