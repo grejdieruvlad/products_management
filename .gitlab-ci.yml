@@ -22,7 +22,7 @@ build_job:
     - /^.*_.*$/
   script:
     - echo "build_project"
-    - python -u cpp_ci_utils/cli.py build --flags $production_gcc_generic_v2 -bm yes -scl yes
+    - python -u cpp_ci_utils/cli.py build --flags $production_generic_set -bm yes -scl yes
   artifacts:
     paths:
      - $dir_build/project
