@@ -1,6 +1,6 @@
 before_script:
-  - bash -l -c "git clone -b master git@gitlab.computervoice.com:cvs/cpp_ci_utils.git"
-  
+  - bash -l -c "git clone git@gitlab.computervoice.com:cvs/cpp_ci_utils.git"
+
 #Stages
 stages:
   - build
