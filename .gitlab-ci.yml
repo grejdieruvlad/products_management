@@ -24,9 +24,9 @@ build_job:
     - python ../cpp_ci_utils/cli.py build --flags production_gcc_generic_v2 -bm yes -scl yes
   artifacts:
     paths:
-     - project
-     - project_test
-     - build.out
+     - ./build/project
+     - ./build/project_test
+     - ./build/build.out
     expire_in : 7 day
 
 run_tests_job:
