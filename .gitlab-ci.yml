@@ -1,5 +1,5 @@
 before_script:
-  - apt-get install -y python-pip
+  - bash -l -c "git clone -b master git@gitlab.computervoice.com:cvs/cpp_ci_utils.git"
 #Stages
 stages:
   - build
@@ -7,7 +7,7 @@ stages:
 #Variables
 variables:
   dir_build : "build"
-  linux_docker_image: "centos_gcc_legacy_generic_v3"
+  linux_docker_image: "centos_gcc_legacy:1.8.0"
   production_generic_set: "production_gcc_generic_v2"
 build_job:
   stage: build
