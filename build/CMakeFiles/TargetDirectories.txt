@@ -1,5 +1,0 @@
-/mnt/Workspace/vgrejdieru_project/build/CMakeFiles/rebuild_cache.dir
-/mnt/Workspace/vgrejdieru_project/build/CMakeFiles/conan.dir
-/mnt/Workspace/vgrejdieru_project/build/CMakeFiles/edit_cache.dir
-/mnt/Workspace/vgrejdieru_project/build/CMakeFiles/project_test.dir
-/mnt/Workspace/vgrejdieru_project/build/CMakeFiles/project.dir
