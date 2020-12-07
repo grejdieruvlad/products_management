@@ -9,6 +9,7 @@ variables:
   production_generic_set: "production_gcc_generic_v2"
 build_job:
   stage: build
+  image: $linux_docker_image
   tags:
     - linux
     - docker
