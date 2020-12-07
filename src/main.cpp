@@ -13,9 +13,10 @@ using namespace std;
 
 int main()
 {
-  int n = 9, div = 0;
+  /*Forcing warning
+   * int n = 9, div = 0;
   div = n/0;
-  std::cout << div << std::endl;
+  std::cout << div << std::endl;*/
   cout << "Hello World!" << endl;
   cvs_util::network::tcp::real::acceptor my_acceptor;
   cvs_util::file::real::file my_file;
