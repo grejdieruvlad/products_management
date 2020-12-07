@@ -20,7 +20,7 @@ build_job:
     - /^.*_.*$/
   script:
     - echo "build_project"
-    - python ../cpp_ci_utils/cli.py build --flags $production_gcc_generic_v2 -bm yes -scl yes
+    - python cpp_ci_utils/cli.py build --flags $production_gcc_generic_v2 -bm yes -scl yes
   artifacts:
     paths:
      - $dir_build/project
@@ -41,7 +41,7 @@ run_tests_job:
     - /^.*_.*$/
   script:
     - echo "unittest"
-    - python ../cpp_ci_utils/cli.py run unittest $dir_build/project_test
+    - python cpp_ci_utils/cli.py run unittest $dir_build/project_test
   dependencies:
     - build_job
 
@@ -58,7 +58,7 @@ run_check_warnings_job:
     - /^.*_.*$/
   script:
     - echo "check_warnings"
-    - python ../cpp_ci_utils/cli.py check_warnings -clf $dir_build/build.out -mw 1
+    - python cpp_ci_utils/cli.py check_warnings -clf $dir_build/build.out -mw 1
   dependencies:
     - build_job
     
