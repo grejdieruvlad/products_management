@@ -1,3 +1,5 @@
+before_script:
+  - bash -l -c "git clone -b master git@gitlab.computervoice.com:cvs/cpp_ci_utils.git"
 #Stages
 stages:
   - build
@@ -21,13 +23,13 @@ build_job:
   script:
     - echo "build_project"
     - python cpp_ci_utils/cli.py build --flags $production_gcc_generic_v2 -bm yes -scl yes
+    - python -u cpp_ci_utils/cli.py build --flags $production_generic_set -bm yes -scl yes
   artifacts:
     paths:
      - $dir_build/project
      - $dir_build/project_test
      - $dir_build/build.out
     expire_in : 7 day
-
 run_tests_job:
   stage: tests
   image: $linux_docker_image
@@ -42,6 +44,7 @@ run_tests_job:
   script:
     - echo "unittest"
     - python cpp_ci_utils/cli.py run unittest $dir_build/project_test
+    - python -u cpp_ci_utils/cli.py run unittest $dir_build/project_test
   dependencies:
     - build_job
 
@@ -59,6 +62,7 @@ run_check_warnings_job:
   script:
     - echo "check_warnings"
     - python cpp_ci_utils/cli.py check_warnings -clf $dir_build/build.out -mw 1
+    - python -u  cpp_ci_utils/cli.py check_warnings -clf $dir_build/build.out -mw 0
   dependencies:
     - build_job
     

@@ -13,6 +13,10 @@ using namespace std;
 
 int main()
 {
+  /*Forcing warning
+   * int n = 9, div = 0;
+  div = n/0;
+  std::cout << div << std::endl;*/
   cout << "Hello World!" << endl;
   cvs_util::network::tcp::real::acceptor my_acceptor;
   cvs_util::file::real::file my_file;
@@ -31,10 +35,9 @@ int main()
         my_acceptor, db, logger,my_duration);
   std::thread server_thread(
         &app::server_manager::server_manager::start_server, server);
-  boost::system::error_code errc;
   std::cout << "Type \"exit\" to stop:" << std::endl;
   std::thread server_writes_th(
-      &app::server_manager::server_manager::server_writes, server);
+        &app::server_manager::server_manager::server_writes, server);
   server_writes_th.detach();
   server_thread.join();
   delete (server);

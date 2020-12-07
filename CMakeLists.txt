@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(project LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "-fsanitize=thread")
-set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_BUILD_TYPE "Debug")
+#set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(CMAKE_CXX_FLAGS "-fsanitize=thread")
+#set(CMAKE_VERBOSE_MAKEFILE ON)
+#set(CMAKE_BUILD_TYPE "Debug")
 include_directories(src)
 
 add_executable(project
